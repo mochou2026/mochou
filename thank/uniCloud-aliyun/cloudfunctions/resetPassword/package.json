@@ -1,0 +1,7 @@
+{
+  "name": "resetPassword",
+  "dependencies": {},
+  "extensions": {
+    "uni-cloud-jql": {}
+  }
+}

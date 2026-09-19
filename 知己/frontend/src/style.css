@@ -1,0 +1,45 @@
+/* 全局：浅色系配色 + 满屏居中基础 */
+:root {
+  --page-1: #f7fafe;
+  --page-2: #eef4ff;
+  --page-3: #f8f5ff;
+
+  --card-bg: #ffffff;
+  --card-border: #e7edf9;
+
+  --text-main: #26304a;
+  --text-sub: #7c88a3;
+  --text-label: #66738f;
+
+  --input-bg: #f8faff;
+  --input-border: #e2e9f7;
+  --input-placeholder: #b3bdd2;
+
+  --accent: #5b8def;
+  --accent-dark: #4478e0;
+  --accent-glow: rgba(91, 141, 239, 0.14);
+
+  --danger: #d9695a;
+  --success: #3f9b7c;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'PingFang SC', 'Microsoft YaHei', 'Hiragino Sans GB', 'Helvetica Neue', Arial, sans-serif;
+  color: var(--text-main);
+  background: linear-gradient(160deg, var(--page-1) 0%, var(--page-2) 48%, var(--page-3) 100%);
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+}

@@ -1,0 +1,18 @@
+# 依赖与构建产物
+node_modules/
+frontend/node_modules/
+frontend/dist/
+backend/target/
+
+# 本地开发数据
+.mysql/
+*.log
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# 系统
+Thumbs.db
+desktop.ini

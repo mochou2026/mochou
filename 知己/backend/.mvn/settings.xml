@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  项目自带 Maven 设置：
+  机器上 D:\apache-maven-3.9.7\conf\settings.xml 把 localRepository 指向了
+  C:\Program Files\Java\repo（普通用户无写入权限），这里改回默认的 ~/.m2/repository，
+  无需改动全局 Maven 安装目录。
+-->
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 https://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+    <localRepository>${user.home}/.m2/repository</localRepository>
+
+    <mirrors>
+        <mirror>
+            <id>aliyun-public</id>
+            <name>Aliyun public mirror</name>
+            <url>https://maven.aliyun.com/repository/public</url>
+            <mirrorOf>central</mirrorOf>
+        </mirror>
+    </mirrors>
+
+</settings>

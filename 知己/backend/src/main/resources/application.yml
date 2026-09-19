@@ -1,0 +1,38 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: zhiji-backend
+
+  datasource:
+    # createDatabaseIfNotExist=true：首次启动会自动创建 mochou 库
+    url: jdbc:mysql://127.0.0.1:3306/mochou?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: 10
+      connection-timeout: 5000
+
+  sql:
+    init:
+      # 每次启动执行 schema.sql，里面是 CREATE ... IF NOT EXISTS，可重复执行
+      # 其中包含 CREATE DATABASE chou（照片墙图片库）
+      mode: always
+      encoding: UTF-8
+
+  servlet:
+    multipart:
+      # 照片墙上传限制
+      max-file-size: 12MB
+      max-request-size: 12MB
+
+# 前后端分离：允许本地前端开发服务器跨域访问
+zhiji:
+  cors:
+    allowed-origins: http://localhost:5173,http://127.0.0.1:5173
+
+logging:
+  level:
+    com.mochou.zhiji: INFO
